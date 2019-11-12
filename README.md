@@ -1,4 +1,5 @@
 Homework
+
 Плейбуки выполнялись в таком порядке:
 - playbook.yml
 - nginx_control.yml
