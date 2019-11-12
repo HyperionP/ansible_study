@@ -1,0 +1,33 @@
+- hosts: aws
+  become: yes
+  tasks:
+    - name: restart nginx
+      service: 
+        name: nginx
+        state: restarted       
+      tags: 
+        - restart
+#---------------------------------------------
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
+      tags: start
+#---------------------------------------------      
+    - name: stop nginx
+      service:
+        name: nginx
+        state: stopped
+      tags: stop
+#---------------------------------------------      
+    - name: disable nginx
+      service:
+        name: nginx
+        enabled: no
+      tags: disable
+#---------------------------------------------      
+    - name: enable nginx
+      service:
+        name: nginx
+        enabled: yes
+      tags: enable
