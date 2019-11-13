@@ -5,7 +5,7 @@
   - name: copy config
     copy: 
       src: nginx.conf
-      dest: /etc/nginx/
+      dest: "{{ conf_dest }}"
   - name: copy index.hmtl
     template: 
       src: index.html.j2 
