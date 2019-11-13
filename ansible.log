@@ -1,0 +1,256 @@
+2019-11-12 20:21:04,725 p=6700 u=max |  PLAY [all] **********************************************************************************************************
+2019-11-12 20:21:04,735 p=6700 u=max |  TASK [Gathering Facts] **********************************************************************************************
+2019-11-12 20:21:07,634 p=6700 u=max |  ok: [gcp0]
+2019-11-12 20:21:07,635 p=6700 u=max |  ok: [aws0]
+2019-11-12 20:21:07,647 p=6700 u=max |  TASK [Base installation] ********************************************************************************************
+2019-11-12 20:21:11,327 p=6700 u=max |  changed: [aws0] => (item=zip)
+2019-11-12 20:21:11,693 p=6700 u=max |  changed: [gcp0] => (item=zip)
+2019-11-12 20:21:14,019 p=6700 u=max |  ok: [aws0] => (item=unzip)
+2019-11-12 20:21:14,560 p=6700 u=max |  ok: [gcp0] => (item=unzip)
+2019-11-12 20:21:16,848 p=6700 u=max |  ok: [aws0] => (item=gzip)
+2019-11-12 20:21:17,396 p=6700 u=max |  ok: [gcp0] => (item=gzip)
+2019-11-12 20:21:20,334 p=6700 u=max |  changed: [aws0] => (item=nano)
+2019-11-12 20:21:21,073 p=6700 u=max |  changed: [gcp0] => (item=nano)
+2019-11-12 20:21:21,091 p=6700 u=max |  TASK [Uninstallation] ***********************************************************************************************
+2019-11-12 20:21:24,376 p=6700 u=max |  changed: [aws0] => (item=unzip)
+2019-11-12 20:21:24,587 p=6700 u=max |  changed: [gcp0] => (item=unzip)
+2019-11-12 20:21:27,672 p=6700 u=max |  changed: [aws0] => (item=nano)
+2019-11-12 20:21:28,123 p=6700 u=max |  changed: [gcp0] => (item=nano)
+2019-11-12 20:21:28,130 p=6700 u=max |  PLAY RECAP **********************************************************************************************************
+2019-11-12 20:21:28,130 p=6700 u=max |  aws0                       : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-12 20:21:28,130 p=6700 u=max |  gcp0                       : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-12 20:26:20,891 p=7089 u=max |  PLAY [aws] **********************************************************************************************************
+2019-11-12 20:26:20,901 p=7089 u=max |  TASK [Gathering Facts] **********************************************************************************************
+2019-11-12 20:26:23,875 p=7089 u=max |  ok: [aws0]
+2019-11-12 20:26:23,900 p=7089 u=max |  TASK [restart nginx] ************************************************************************************************
+2019-11-12 20:26:25,698 p=7089 u=max |  changed: [aws0]
+2019-11-12 20:26:25,716 p=7089 u=max |  TASK [start nginx] **************************************************************************************************
+2019-11-12 20:26:27,121 p=7089 u=max |  ok: [aws0]
+2019-11-12 20:26:27,155 p=7089 u=max |  TASK [stop nginx] ***************************************************************************************************
+2019-11-12 20:26:28,558 p=7089 u=max |  changed: [aws0]
+2019-11-12 20:26:28,575 p=7089 u=max |  TASK [disable nginx] ************************************************************************************************
+2019-11-12 20:26:29,952 p=7089 u=max |  ok: [aws0]
+2019-11-12 20:26:29,985 p=7089 u=max |  TASK [enable nginx] *************************************************************************************************
+2019-11-12 20:26:31,423 p=7089 u=max |  changed: [aws0]
+2019-11-12 20:26:31,427 p=7089 u=max |  PLAY RECAP **********************************************************************************************************
+2019-11-12 20:26:31,428 p=7089 u=max |  aws0                       : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-12 20:27:31,593 p=7185 u=max |  PLAY [nginx installation] *******************************************************************************************
+2019-11-12 20:27:31,603 p=7185 u=max |  TASK [Gathering Facts] **********************************************************************************************
+2019-11-12 20:27:34,734 p=7185 u=max |  ok: [gcp0]
+2019-11-12 20:27:34,750 p=7185 u=max |  TASK [install nginx] ************************************************************************************************
+2019-11-12 20:27:44,942 p=7185 u=max |  ok: [gcp0]
+2019-11-12 20:27:44,972 p=7185 u=max |  TASK [copy config] **************************************************************************************************
+2019-11-12 20:27:46,283 p=7185 u=max |  changed: [gcp0]
+2019-11-12 20:27:46,316 p=7185 u=max |  TASK [copy index.hmtl] **********************************************************************************************
+2019-11-12 20:27:48,623 p=7185 u=max |  ok: [gcp0]
+2019-11-12 20:27:48,640 p=7185 u=max |  TASK [restart nginx] ************************************************************************************************
+2019-11-12 20:27:50,269 p=7185 u=max |  changed: [gcp0]
+2019-11-12 20:27:50,276 p=7185 u=max |  PLAY RECAP **********************************************************************************************************
+2019-11-12 20:27:50,276 p=7185 u=max |  gcp0                       : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2019-11-12 20:28:02,709 p=7260 u=max |  PLAY [aws] **********************************************************************************************************
+2019-11-12 20:28:02,770 p=7260 u=max |  TASK [Gathering Facts] **********************************************************************************************
+2019-11-12 20:28:05,872 p=7260 u=max |  ok: [aws0]
+2019-11-12 20:28:05,888 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu) Install Required Debian and Ubuntu Dependencies] ********************
+2019-11-12 20:28:05,901 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:05,912 p=7260 u=max |  TASK [nginxinc.nginx : (Install: APT OSs) Set Default APT NGINX Signing Key URL] ************************************
+2019-11-12 20:28:05,926 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:05,939 p=7260 u=max |  TASK [nginxinc.nginx : (Install: APT OSs) Set APT NGINX Signing Key URL] ********************************************
+2019-11-12 20:28:05,953 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:05,965 p=7260 u=max |  TASK [nginxinc.nginx : (Install: APT OSs) Add APT NGINX Signing Key] ************************************************
+2019-11-12 20:28:05,981 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:05,995 p=7260 u=max |  TASK [nginxinc.nginx : (Install: RPM OSs) Set Default RPM NGINX Signing Key] ****************************************
+2019-11-12 20:28:06,019 p=7260 u=max |  ok: [aws0]
+2019-11-12 20:28:06,031 p=7260 u=max |  TASK [nginxinc.nginx : (Install: RPM OSs) Set RPM NGINX Signing Key URL] ********************************************
+2019-11-12 20:28:06,054 p=7260 u=max |  ok: [aws0]
+2019-11-12 20:28:06,066 p=7260 u=max |  TASK [nginxinc.nginx : (Install: RPM OSs) Add RPM NGINX Signing Key] ************************************************
+2019-11-12 20:28:07,883 p=7260 u=max |  ok: [aws0]
+2019-11-12 20:28:07,901 p=7260 u=max |  TASK [nginxinc.nginx : (Install: APK OSs) Download NGINX Signing Key] ***********************************************
+2019-11-12 20:28:07,918 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:07,930 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu) Add NGINX Repository] ***********************************************
+2019-11-12 20:28:07,980 p=7260 u=max |  skipping: [aws0] => (item=deb https://nginx.org/packages/mainline/redhat/ Ootpa nginx) 
+2019-11-12 20:28:07,990 p=7260 u=max |  skipping: [aws0] => (item=deb-src https://nginx.org/packages/mainline/redhat/ Ootpa nginx) 
+2019-11-12 20:28:08,002 p=7260 u=max |  TASK [nginxinc.nginx : (Install: CentOS/RedHat) Add NGINX Repository] ***********************************************
+2019-11-12 20:28:09,518 p=7260 u=max |  ok: [aws0]
+2019-11-12 20:28:09,537 p=7260 u=max |  TASK [nginxinc.nginx : (Install: SUSE) Add NGINX Repository] ********************************************************
+2019-11-12 20:28:09,560 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:09,579 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Fetch Ports] **************************************************************
+2019-11-12 20:28:09,602 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:09,613 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Extract Ports] ************************************************************
+2019-11-12 20:28:09,635 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:09,647 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu/CentOS/RedHat) Install NGINX] ****************************************
+2019-11-12 20:28:12,412 p=7260 u=max |  ok: [aws0]
+2019-11-12 20:28:12,446 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Install NGINX] ************************************************************
+2019-11-12 20:28:12,469 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,484 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu/CentOS/RedHat/FreeBSD) Install NGINX] ********************************
+2019-11-12 20:28:12,504 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,519 p=7260 u=max |  TASK [nginxinc.nginx : (All OSs) Create SSL Directory] **************************************************************
+2019-11-12 20:28:12,540 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,553 p=7260 u=max |  TASK [nginxinc.nginx : (All OSs) Copy NGINX Plus Certificate and License Key] ***************************************
+2019-11-12 20:28:12,579 p=7260 u=max |  skipping: [aws0] => (item=license/nginx-repo.crt) 
+2019-11-12 20:28:12,586 p=7260 u=max |  skipping: [aws0] => (item=license/nginx-repo.key) 
+2019-11-12 20:28:12,603 p=7260 u=max |  TASK [nginxinc.nginx : (Alpine Linux) Create APK Directory] *********************************************************
+2019-11-12 20:28:12,623 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,637 p=7260 u=max |  TASK [nginxinc.nginx : (Alpine Linux) Copy NGINX Plus Key] **********************************************************
+2019-11-12 20:28:12,655 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,668 p=7260 u=max |  TASK [nginxinc.nginx : (Alpine Linux) Copy NGINX Plus Certificate] **************************************************
+2019-11-12 20:28:12,687 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,700 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu) Add NGINX Plus Repository] ******************************************
+2019-11-12 20:28:12,718 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,730 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu) Verify NGINX Plus License] ******************************************
+2019-11-12 20:28:12,749 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,766 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu) Update APT Cache] ***************************************************
+2019-11-12 20:28:12,784 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,797 p=7260 u=max |  TASK [nginxinc.nginx : (Install: CentOS/RedHat/Oracle Linux) Add NGINX Plus Repository] *****************************
+2019-11-12 20:28:12,814 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,827 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Amazon Linux) Add NGINX Plus Repository] *******************************************
+2019-11-12 20:28:12,844 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,863 p=7260 u=max |  TASK [nginxinc.nginx : (Install: SUSE) Combine NGINX Plus Certificate and License Keys] *****************************
+2019-11-12 20:28:12,882 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,895 p=7260 u=max |  TASK [nginxinc.nginx : (Install: SUSE) Add NGINX Plus Repository] ***************************************************
+2019-11-12 20:28:12,915 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,929 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Add NGINX Plus Repository] ************************************************
+2019-11-12 20:28:12,949 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,963 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Verify NGINX Plus License] ************************************************
+2019-11-12 20:28:12,982 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:12,996 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Alpine Linux) Add NGINX Plus Repository] *******************************************
+2019-11-12 20:28:13,013 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,025 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Plus] *******************************************************
+2019-11-12 20:28:13,044 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,056 p=7260 u=max |  TASK [nginxinc.nginx : (All OSs) Delete NGINX Plus License] *********************************************************
+2019-11-12 20:28:13,075 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,087 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Remove NGINX configuration files] *******************************************
+2019-11-12 20:28:13,111 p=7260 u=max |  skipping: [aws0] => (item=/etc/nginx/conf.d) 
+2019-11-12 20:28:13,124 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Open Source JavaScript Module] ******************************
+2019-11-12 20:28:13,143 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,157 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Plus JavaScript Module] *************************************
+2019-11-12 20:28:13,176 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,187 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Load NGINX JavaScript Module] *********************************************
+2019-11-12 20:28:13,211 p=7260 u=max |  skipping: [aws0] => (item=load_module modules/ngx_http_js_module.so;) 
+2019-11-12 20:28:13,218 p=7260 u=max |  skipping: [aws0] => (item=load_module modules/ngx_stream_js_module.so;) 
+2019-11-12 20:28:13,230 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Open Source Perl Module] ************************************
+2019-11-12 20:28:13,247 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,260 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Plus Perl Module] *******************************************
+2019-11-12 20:28:13,279 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,291 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Load NGINX Perl Module] ***************************************************
+2019-11-12 20:28:13,308 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,320 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Open Source GeoIP Module] ***********************************
+2019-11-12 20:28:13,338 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,351 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Plus GeoIP Module] ******************************************
+2019-11-12 20:28:13,368 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,381 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Load NGINX GeoIP Module] **************************************************
+2019-11-12 20:28:13,404 p=7260 u=max |  skipping: [aws0] => (item=load_module modules/ngx_http_geoip_module.so;) 
+2019-11-12 20:28:13,412 p=7260 u=max |  skipping: [aws0] => (item=load_module modules/ngx_stream_geoip_module.so;) 
+2019-11-12 20:28:13,427 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Open Source Image Filter Module] ****************************
+2019-11-12 20:28:13,445 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,458 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Plus Image Filter Module] ***********************************
+2019-11-12 20:28:13,477 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,488 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Load NGINX Image Filter Module] *******************************************
+2019-11-12 20:28:13,507 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,519 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Plus RTMP Module] *******************************************
+2019-11-12 20:28:13,537 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,548 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Load NGINX RTMP Module] ***************************************************
+2019-11-12 20:28:13,567 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,579 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Open Source XSLT Module] ************************************
+2019-11-12 20:28:13,598 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,611 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Plus XSLT Module] *******************************************
+2019-11-12 20:28:13,629 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,641 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Load NGINX XSLT Module] ***************************************************
+2019-11-12 20:28:13,658 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,670 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Plus WAF Module] ********************************************
+2019-11-12 20:28:13,687 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,700 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: NGINX Plus) Load NGINX Plus WAF Module] **********************************************
+2019-11-12 20:28:13,720 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,732 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure NGINX Main Directory Exists] ***************************************
+2019-11-12 20:28:13,750 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,761 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Upload NGINX Main Configuration File] *************************************
+2019-11-12 20:28:13,779 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,791 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure NGINX HTTP Directory Exists] ***************************************
+2019-11-12 20:28:13,809 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,821 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Upload NGINX HTTP Configuration Files] ************************************
+2019-11-12 20:28:13,850 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure NGINX Stream Directory Exists] *************************************
+2019-11-12 20:28:13,867 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,879 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Upload NGINX Stream Configuration Files] **********************************
+2019-11-12 20:28:13,904 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure NGINX HTML Directory Exists] ***************************************
+2019-11-12 20:28:13,922 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,932 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Upload NGINX HTML Files] **************************************************
+2019-11-12 20:28:13,958 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure SSL Certificate Directory Exists] **********************************
+2019-11-12 20:28:13,975 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:13,986 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure SSL Key Directory Exists] ******************************************
+2019-11-12 20:28:14,004 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,015 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Upload NGINX SSL Certificates] ********************************************
+2019-11-12 20:28:14,041 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Upload NGINX SSL Keys] ****************************************************
+2019-11-12 20:28:14,066 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure HTML Directory Exists] *********************************************
+2019-11-12 20:28:14,090 p=7260 u=max |  skipping: [aws0] => (item={'key': 'default', 'value': {'template_file': 'www/index.html.j2', 'html_file_name': 'index.html', 'html_file_location': '/usr/share/nginx/html', 'web_server_name': 'Default'}}) 
+2019-11-12 20:28:14,103 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Dynamically Generate HTML Files] ******************************************
+2019-11-12 20:28:14,127 p=7260 u=max |  skipping: [aws0] => (item={'key': 'default', 'value': {'template_file': 'www/index.html.j2', 'html_file_name': 'index.html', 'html_file_location': '/usr/share/nginx/html', 'web_server_name': 'Default'}}) 
+2019-11-12 20:28:14,139 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure NGINX Main Directory Exists] ***************************************
+2019-11-12 20:28:14,156 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,167 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Dynamically Generate NGINX Main Configuration File] ***********************
+2019-11-12 20:28:14,186 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,198 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure NGINX HTTP Directory Exists] ***************************************
+2019-11-12 20:28:14,233 p=7260 u=max |  skipping: [aws0] => (item={'key': 'default', 'value': {'template_file': 'http/default.conf.j2', 'conf_file_name': 'default.conf', 'conf_file_location': '/etc/nginx/conf.d/', 'port': 8081, 'server_name': 'localhost', 'error_page': '/usr/share/nginx/html', 'root': '/usr/share/nginx/html', 'https_redirect': False, 'autoindex': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404', 'ssl': {'cert': '/etc/ssl/certs/default.crt', 'key': '/etc/ssl/private/default.key', 'dhparam': '/etc/ssl/private/dh_param.pem', 'protocols': 'TLSv1 TLSv1.1 TLSv1.2', 'ciphers': 'HIGH:!aNULL:!MD5', 'session_cache': 'none', 'session_timeout': '5m'}, 'web_server': {'locations': {'default': {'location': '/', 'html_file_location': '/usr/share/nginx/html', 'html_file_name': 'index.html', 'autoindex': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404'}}, 'http_demo_conf': False}, 'reverse_proxy': {'proxy_cache_path': [{'path': '/var/cache/nginx/proxy/backend', 'keys_zone': {'name': 'backend_proxy_cache', 'size': '10m'}, 'levels': '1:2', 'max_size': '10g', 'inactive': '60m', 'use_temp_path': True}], 'proxy_temp_path': {'path': '/var/cache/nginx/proxy/temp'}, 'proxy_cache_lock': True, 'proxy_cache_min_uses': 5, 'proxy_cache_revalidate': True, 'proxy_cache_use_stale': ['error', 'timeout'], 'proxy_ignore_headers': ['Expires'], 'locations': {'backend': {'location': '/', 'proxy_connect_timeout': None, 'proxy_pass': 'http://backend', 'proxy_set_header': {'header_host': {'name': 'Host', 'value': '$host'}, 'header_x_real_ip': {'name': 'X-Real-IP', 'value': '$remote_addr'}, 'header_x_forwarded_for': {'name': 'X-Forwarded-For', 'value': '$proxy_add_x_forwarded_for'}, 'header_x_forwarded_proto': {'name': 'X-Forwarded-Proto', 'value': '$scheme'}}, 'proxy_read_timeout': None, 'proxy_ssl': {'cert': '/etc/ssl/certs/proxy_default.crt', 'key': '/etc/ssl/private/proxy_default.key', 'trusted_cert': '/etc/ssl/certs/proxy_ca.crt', 'protocols': 'TLSv1 TLSv1.1 TLSv1.2', 'ciphers': 'HIGH:!aNULL:!MD5', 'verify': False, 'verify_depth': 1, 'session_reuse': True}, 'proxy_cache': 'frontend_proxy_cache', 'proxy_temp_path': {'path': '/var/cache/nginx/proxy/backend/temp'}, 'proxy_cache_lock': False, 'proxy_cache_min_uses': 3, 'proxy_cache_revalidate': False, 'proxy_cache_use_stale': ['http_403', 'http_404'], 'proxy_ignore_headers': ['Vary', 'Cache-Control'], 'websocket': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404'}}, 'health_check_plus': False}, 'proxy_cache': {'proxy_cache_path': {'path': '/var/cache/nginx', 'keys_zone': {'name': 'one', 'size': '10m'}}, 'proxy_temp_path': {'path': '/var/cache/nginx/proxy'}}, 'upstreams': {'upstream1': {'name': 'backend', 'lb_method': 'least_conn', 'zone_name': 'backend_mem_zone', 'zone_size': '64k', 'sticky_cookie': False, 'servers': {'server1': {'address': 'localhost', 'port': 8081, 'weight': 1, 'health_check': 'max_fails=1 fail_timeout=10s'}}}}}}) 
+2019-11-12 20:28:14,243 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure NGINX Proxy Cache Directories Exist] *******************************
+2019-11-12 20:28:14,274 p=7260 u=max |  skipping: [aws0] => (item=[{'template_file': 'http/default.conf.j2', 'conf_file_name': 'default.conf', 'conf_file_location': '/etc/nginx/conf.d/', 'port': 8081, 'server_name': 'localhost', 'error_page': '/usr/share/nginx/html', 'root': '/usr/share/nginx/html', 'https_redirect': False, 'autoindex': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404', 'ssl': {'cert': '/etc/ssl/certs/default.crt', 'key': '/etc/ssl/private/default.key', 'dhparam': '/etc/ssl/private/dh_param.pem', 'protocols': 'TLSv1 TLSv1.1 TLSv1.2', 'ciphers': 'HIGH:!aNULL:!MD5', 'session_cache': 'none', 'session_timeout': '5m'}, 'web_server': {'locations': {'default': {'location': '/', 'html_file_location': '/usr/share/nginx/html', 'html_file_name': 'index.html', 'autoindex': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404'}}, 'http_demo_conf': False}, 'reverse_proxy': {'proxy_temp_path': {'path': '/var/cache/nginx/proxy/temp'}, 'proxy_cache_lock': True, 'proxy_cache_min_uses': 5, 'proxy_cache_revalidate': True, 'proxy_cache_use_stale': ['error', 'timeout'], 'proxy_ignore_headers': ['Expires'], 'locations': {'backend': {'location': '/', 'proxy_connect_timeout': None, 'proxy_pass': 'http://backend', 'proxy_set_header': {'header_host': {'name': 'Host', 'value': '$host'}, 'header_x_real_ip': {'name': 'X-Real-IP', 'value': '$remote_addr'}, 'header_x_forwarded_for': {'name': 'X-Forwarded-For', 'value': '$proxy_add_x_forwarded_for'}, 'header_x_forwarded_proto': {'name': 'X-Forwarded-Proto', 'value': '$scheme'}}, 'proxy_read_timeout': None, 'proxy_ssl': {'cert': '/etc/ssl/certs/proxy_default.crt', 'key': '/etc/ssl/private/proxy_default.key', 'trusted_cert': '/etc/ssl/certs/proxy_ca.crt', 'protocols': 'TLSv1 TLSv1.1 TLSv1.2', 'ciphers': 'HIGH:!aNULL:!MD5', 'verify': False, 'verify_depth': 1, 'session_reuse': True}, 'proxy_cache': 'frontend_proxy_cache', 'proxy_temp_path': {'path': '/var/cache/nginx/proxy/backend/temp'}, 'proxy_cache_lock': False, 'proxy_cache_min_uses': 3, 'proxy_cache_revalidate': False, 'proxy_cache_use_stale': ['http_403', 'http_404'], 'proxy_ignore_headers': ['Vary', 'Cache-Control'], 'websocket': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404'}}, 'health_check_plus': False}, 'proxy_cache': {'proxy_cache_path': {'path': '/var/cache/nginx', 'keys_zone': {'name': 'one', 'size': '10m'}}, 'proxy_temp_path': {'path': '/var/cache/nginx/proxy'}}, 'upstreams': {'upstream1': {'name': 'backend', 'lb_method': 'least_conn', 'zone_name': 'backend_mem_zone', 'zone_size': '64k', 'sticky_cookie': False, 'servers': {'server1': {'address': 'localhost', 'port': 8081, 'weight': 1, 'health_check': 'max_fails=1 fail_timeout=10s'}}}}}, {'path': '/var/cache/nginx/proxy/backend', 'keys_zone': {'name': 'backend_proxy_cache', 'size': '10m'}, 'levels': '1:2', 'max_size': '10g', 'inactive': '60m', 'use_temp_path': True}]) 
+2019-11-12 20:28:14,285 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Dynamically Generate NGINX HTTP Configuration Files] **********************
+2019-11-12 20:28:14,316 p=7260 u=max |  skipping: [aws0] => (item={'key': 'default', 'value': {'template_file': 'http/default.conf.j2', 'conf_file_name': 'default.conf', 'conf_file_location': '/etc/nginx/conf.d/', 'port': 8081, 'server_name': 'localhost', 'error_page': '/usr/share/nginx/html', 'root': '/usr/share/nginx/html', 'https_redirect': False, 'autoindex': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404', 'ssl': {'cert': '/etc/ssl/certs/default.crt', 'key': '/etc/ssl/private/default.key', 'dhparam': '/etc/ssl/private/dh_param.pem', 'protocols': 'TLSv1 TLSv1.1 TLSv1.2', 'ciphers': 'HIGH:!aNULL:!MD5', 'session_cache': 'none', 'session_timeout': '5m'}, 'web_server': {'locations': {'default': {'location': '/', 'html_file_location': '/usr/share/nginx/html', 'html_file_name': 'index.html', 'autoindex': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404'}}, 'http_demo_conf': False}, 'reverse_proxy': {'proxy_cache_path': [{'path': '/var/cache/nginx/proxy/backend', 'keys_zone': {'name': 'backend_proxy_cache', 'size': '10m'}, 'levels': '1:2', 'max_size': '10g', 'inactive': '60m', 'use_temp_path': True}], 'proxy_temp_path': {'path': '/var/cache/nginx/proxy/temp'}, 'proxy_cache_lock': True, 'proxy_cache_min_uses': 5, 'proxy_cache_revalidate': True, 'proxy_cache_use_stale': ['error', 'timeout'], 'proxy_ignore_headers': ['Expires'], 'locations': {'backend': {'location': '/', 'proxy_connect_timeout': None, 'proxy_pass': 'http://backend', 'proxy_set_header': {'header_host': {'name': 'Host', 'value': '$host'}, 'header_x_real_ip': {'name': 'X-Real-IP', 'value': '$remote_addr'}, 'header_x_forwarded_for': {'name': 'X-Forwarded-For', 'value': '$proxy_add_x_forwarded_for'}, 'header_x_forwarded_proto': {'name': 'X-Forwarded-Proto', 'value': '$scheme'}}, 'proxy_read_timeout': None, 'proxy_ssl': {'cert': '/etc/ssl/certs/proxy_default.crt', 'key': '/etc/ssl/private/proxy_default.key', 'trusted_cert': '/etc/ssl/certs/proxy_ca.crt', 'protocols': 'TLSv1 TLSv1.1 TLSv1.2', 'ciphers': 'HIGH:!aNULL:!MD5', 'verify': False, 'verify_depth': 1, 'session_reuse': True}, 'proxy_cache': 'frontend_proxy_cache', 'proxy_temp_path': {'path': '/var/cache/nginx/proxy/backend/temp'}, 'proxy_cache_lock': False, 'proxy_cache_min_uses': 3, 'proxy_cache_revalidate': False, 'proxy_cache_use_stale': ['http_403', 'http_404'], 'proxy_ignore_headers': ['Vary', 'Cache-Control'], 'websocket': False, 'auth_basic': None, 'auth_basic_user_file': None, 'try_files': '$uri $uri/index.html $uri.html =404'}}, 'health_check_plus': False}, 'proxy_cache': {'proxy_cache_path': {'path': '/var/cache/nginx', 'keys_zone': {'name': 'one', 'size': '10m'}}, 'proxy_temp_path': {'path': '/var/cache/nginx/proxy'}}, 'upstreams': {'upstream1': {'name': 'backend', 'lb_method': 'least_conn', 'zone_name': 'backend_mem_zone', 'zone_size': '64k', 'sticky_cookie': False, 'servers': {'server1': {'address': 'localhost', 'port': 8081, 'weight': 1, 'health_check': 'max_fails=1 fail_timeout=10s'}}}}}}) 
+2019-11-12 20:28:14,328 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Dynamically Generate NGINX API Configuration File] ************************
+2019-11-12 20:28:14,344 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,357 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Ensure NGINX Stream Directory Exists] *************************************
+2019-11-12 20:28:14,382 p=7260 u=max |  skipping: [aws0] => (item={'key': 'default', 'value': {'template_file': 'stream/default.conf.j2', 'conf_file_name': 'default.conf', 'conf_file_location': '/etc/nginx/conf.d/stream/', 'network_streams': {'default': {'listen_address': 'localhost', 'listen_port': 80, 'udp_enable': False, 'proxy_pass': 'backend', 'proxy_timeout': '3s', 'proxy_connect_timeout': '1s', 'proxy_protocol': False, 'proxy_ssl': {'cert': '/etc/ssl/certs/proxy_default.crt', 'key': '/etc/ssl/private/proxy_default.key', 'trusted_cert': '/etc/ssl/certs/proxy_ca.crt', 'protocols': 'TLSv1 TLSv1.1 TLSv1.2', 'ciphers': 'HIGH:!aNULL:!MD5', 'verify': False, 'verify_depth': 1, 'session_reuse': True}, 'health_check_plus': False}}, 'upstreams': {'upstream1': {'name': 'backend', 'lb_method': 'least_conn', 'zone_name': 'backend', 'zone_size': '64k', 'sticky_cookie': False, 'servers': {'server1': {'address': 'localhost', 'port': 8080, 'weight': 1, 'health_check': 'max_fails=1 fail_timeout=10s'}}}}}}) 
+2019-11-12 20:28:14,393 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All NGINX) Dynamically Generate NGINX Stream Configuration Files] ********************
+2019-11-12 20:28:14,419 p=7260 u=max |  skipping: [aws0] => (item={'key': 'default', 'value': {'template_file': 'stream/default.conf.j2', 'conf_file_name': 'default.conf', 'conf_file_location': '/etc/nginx/conf.d/stream/', 'network_streams': {'default': {'listen_address': 'localhost', 'listen_port': 80, 'udp_enable': False, 'proxy_pass': 'backend', 'proxy_timeout': '3s', 'proxy_connect_timeout': '1s', 'proxy_protocol': False, 'proxy_ssl': {'cert': '/etc/ssl/certs/proxy_default.crt', 'key': '/etc/ssl/private/proxy_default.key', 'trusted_cert': '/etc/ssl/certs/proxy_ca.crt', 'protocols': 'TLSv1 TLSv1.1 TLSv1.2', 'ciphers': 'HIGH:!aNULL:!MD5', 'verify': False, 'verify_depth': 1, 'session_reuse': True}, 'health_check_plus': False}}, 'upstreams': {'upstream1': {'name': 'backend', 'lb_method': 'least_conn', 'zone_name': 'backend', 'zone_size': '64k', 'sticky_cookie': False, 'servers': {'server1': {'address': 'localhost', 'port': 8080, 'weight': 1, 'health_check': 'max_fails=1 fail_timeout=10s'}}}}}}) 
+2019-11-12 20:28:14,432 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: NGINX Open Source) Enable NGINX Open Source Status] **********************************
+2019-11-12 20:28:14,453 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,464 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: NGINX Plus) Enable NGINX Plus Status] ************************************************
+2019-11-12 20:28:14,481 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,492 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Register NGINX configuration] ***********************************************
+2019-11-12 20:28:14,510 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,524 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Print NGINX configuration] **************************************************
+2019-11-12 20:28:14,540 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,552 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu) Add NGINX Amplify Agent Repository] *********************************
+2019-11-12 20:28:14,567 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,579 p=7260 u=max |  TASK [nginxinc.nginx : (Install: CentOS/RedHat/Amazon Linux) Add NGINX Amplify Agent Repository] ********************
+2019-11-12 20:28:14,593 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,605 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Amplify Agent] **********************************************
+2019-11-12 20:28:14,619 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,630 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Copy NGINX Configurator Agent Configuration Template] ***********************
+2019-11-12 20:28:14,644 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,655 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Configure NGINX Amplify Agent API Key] **************************************
+2019-11-12 20:28:14,669 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,683 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu) Add NGINX Controller Agent Repository] ******************************
+2019-11-12 20:28:14,698 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,711 p=7260 u=max |  TASK [nginxinc.nginx : (Install: CentOS/RedHat) Add NGINX Controller Agent Repository] ******************************
+2019-11-12 20:28:14,726 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,737 p=7260 u=max |  TASK [nginxinc.nginx : (Install: All OSs) Install NGINX Controller Agent] *******************************************
+2019-11-12 20:28:14,752 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,763 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Copy NGINX Controller Agent Configuration Template] *************************
+2019-11-12 20:28:14,776 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,788 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Copy NGINX Configurator Agent Configuration Template] ***********************
+2019-11-12 20:28:14,802 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,814 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Configure NGINX Controller Agent API Key] ***********************************
+2019-11-12 20:28:14,831 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,845 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Configure NGINX Controller Agent API URL] ***********************************
+2019-11-12 20:28:14,860 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,872 p=7260 u=max |  TASK [nginxinc.nginx : (Setup: All OSs) Configure NGINX Controller Agent API Hostname] ******************************
+2019-11-12 20:28:14,886 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,897 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu) Add NGINX Unit Repository] ******************************************
+2019-11-12 20:28:14,920 p=7260 u=max |  skipping: [aws0] => (item=deb https://packages.nginx.org/unit/redhat/ Ootpa unit) 
+2019-11-12 20:28:14,925 p=7260 u=max |  skipping: [aws0] => (item=deb-src https://packages.nginx.org/unit/redhat/ Ootpa unit) 
+2019-11-12 20:28:14,937 p=7260 u=max |  TASK [nginxinc.nginx : (Install: CentOS/RedHat) Add NGINX Unit Repository] ******************************************
+2019-11-12 20:28:14,951 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,963 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Amazon Linux) Add NGINX Unit Repository] *******************************************
+2019-11-12 20:28:14,978 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:14,989 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Fetch Ports] **************************************************************
+2019-11-12 20:28:15,004 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:15,015 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Extract Ports] ************************************************************
+2019-11-12 20:28:15,032 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:15,044 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu/CentOS/RedHat) Install NGINX Unit] ***********************************
+2019-11-12 20:28:15,059 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:15,070 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Install NGINX Unit] *******************************************************
+2019-11-12 20:28:15,084 p=7260 u=max |  skipping: [aws0]
+2019-11-12 20:28:15,096 p=7260 u=max |  TASK [nginxinc.nginx : (Install: Debian/Ubuntu/CentOS/RedHat) Install NGINX Unit Modules] ***************************
+2019-11-12 20:28:15,113 p=7260 u=max |  skipping: [aws0] => (item=None) 
+2019-11-12 20:28:15,125 p=7260 u=max |  TASK [nginxinc.nginx : (Install: FreeBSD) Install NGINX Unit Modules] ***********************************************
+2019-11-12 20:28:15,141 p=7260 u=max |  skipping: [aws0] => (item=None) 
+2019-11-12 20:28:15,144 p=7260 u=max |  PLAY RECAP **********************************************************************************************************
+2019-11-12 20:28:15,144 p=7260 u=max |  aws0                       : ok=6    changed=0    unreachable=0    failed=0    skipped=96   rescued=0    ignored=0   
