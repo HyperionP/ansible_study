@@ -1,0 +1,2 @@
+temp_dest: /usr/share/nginx/html/index.html
+conf_dest: /etc/nginx/

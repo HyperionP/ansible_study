@@ -1,0 +1,17 @@
+  - name: install nginx
+    package: 
+      name: nginx 
+      update_cache: yes
+  - name: copy config
+    copy: 
+      src: nginx.conf
+      dest: /etc/nginx/
+  - name: copy index.hmtl
+    template: 
+      src: index.html.j2 
+      dest: "{{ temp_dest }}"
+      mode: '0644'
+  - name: restart nginx
+    service: 
+      name: nginx 
+      state: restarted

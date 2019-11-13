@@ -1,0 +1,6 @@
+- name: playbook
+  become: yes
+  hosts: gcp
+  roles:
+    - nginx
+  
