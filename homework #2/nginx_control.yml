@@ -1,0 +1,6 @@
+- name: nginx control
+  become: yes
+  hosts: aws
+  roles:
+    - nginx_control
+  tags: start , enable
