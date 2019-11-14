@@ -1,0 +1,7 @@
+[gcp]
+gcp0 ansible_ssh_host=35.246.169.58 ansible_ssh_user=max 
+[aws]
+aws0 ansible_ssh_host=18.194.208.9 ansible_ssh_user=ec2-user
+[linux:children]
+gcp
+aws

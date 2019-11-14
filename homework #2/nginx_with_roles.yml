@@ -1,4 +1,4 @@
-- name: playbook
+- name: nginx install
   become: yes
   hosts: gcp
   roles:

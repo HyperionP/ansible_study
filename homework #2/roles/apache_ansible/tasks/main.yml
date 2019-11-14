@@ -1,0 +1,23 @@
+- name: Installing apache
+  package:
+    name: httpd
+    state: present
+  tags: install
+- name: starting apache
+  service:
+    name: httpd
+    state: started
+  tags: start
+- name: enable apache
+  service:
+    name: httpd
+    enabled: yes
+  tags: enable 
+- name: copy conf
+  copy:
+    src: vhost.conf
+    dest: /etc/httpd/conf.d/
+- name: restart apache
+  service: 
+    name: httpd
+    state: restarted

@@ -1,0 +1,5 @@
+- name: apache install
+  become: yes
+  hosts: gcp
+  roles:
+    - apache_ansible
