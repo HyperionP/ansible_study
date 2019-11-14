@@ -1,0 +1,5 @@
+---
+- name: copy config
+  copy: 
+    src: nginx.conf
+    dest: "{{ conf_dest }}"

@@ -1,17 +1,10 @@
-  - name: install nginx
-    package: 
-      name: nginx 
-      update_cache: yes
-  - name: copy config
-    copy: 
-      src: nginx.conf
-      dest: "{{ conf_dest }}"
-  - name: copy index.hmtl
-    template: 
-      src: index.html.j2 
-      dest: "{{ temp_dest }}"
-      mode: '0644'
-  - name: restart nginx
-    service: 
-      name: nginx 
-      state: restarted
+---
+- include_tasks: install.yml
+  tags: install 
+- include_tasks: copy.yml
+  tags: copy_conf
+- include_tasks: copy_index.yml
+  tags: copy_index
+- include_tasks: restart.yml
+  tags: restart
+  

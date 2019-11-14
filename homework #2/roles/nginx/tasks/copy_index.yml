@@ -1,0 +1,6 @@
+---
+- name: copy index.hmtl
+  template: 
+    src: index.html.j2 
+    dest: "{{ temp_dest }}"
+    mode: '0644'
