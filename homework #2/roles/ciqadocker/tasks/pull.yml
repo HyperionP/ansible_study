@@ -1,0 +1,3 @@
+---
+- name: pull image using shell
+  shell: "docker pull gcr.io/canvas-sentinel-258308/spring-bootapp:{{ varTag }}"

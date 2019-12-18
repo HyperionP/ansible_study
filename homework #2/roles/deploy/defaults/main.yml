@@ -1,0 +1,4 @@
+---
+# defaults file for deploy
+varDestination: "/home/ec2-user/deploydir/"
+varPort: "8080"

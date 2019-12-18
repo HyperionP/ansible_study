@@ -1,0 +1,6 @@
+---
+# defaults file for docker
+varTag: "latest"
+varPort: "8080"
+varUser: "parasitchmax"
+varDestination: "/home/{{ varUser }}/fordocker/"

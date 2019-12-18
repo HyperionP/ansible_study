@@ -1,0 +1,6 @@
+---
+- name: run container on specified port
+  docker_container:
+    image: gcr.io/canvas-sentinel-258308/spring-bootapp:{{ varTag }}
+    ports: "8081:8080"
+    name: spring-boot

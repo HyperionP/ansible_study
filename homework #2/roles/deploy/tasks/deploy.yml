@@ -1,0 +1,6 @@
+---
+- name: start artifact
+  shell:
+    cmd: "java -jar {{varDestination}}spring-boot.latest.jar --server.port={{ varPort }} &"
+  async: 10
+  poll: 0

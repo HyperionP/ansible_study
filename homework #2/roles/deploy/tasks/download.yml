@@ -1,0 +1,12 @@
+---
+- name: delete previous
+  file:
+    path: "{{varDestination}}/spring-boot.latest.jar"
+    state: absent
+- name: kill java
+  shell: "pkill java"
+  ignore_errors: yes
+- name: download artifact
+  shell:
+    cmd: "cd {{ varDestination }} && curl -uadmin:AP46nzMt2qjYkvPyNM89orUEp6E -O \"http://35.228.43.230:8081/artifactory/generic-local/spring-boot.latest.jar\""
+    

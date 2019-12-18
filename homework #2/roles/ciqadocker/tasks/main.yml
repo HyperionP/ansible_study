@@ -1,0 +1,5 @@
+---
+# tasks file for ciqadocker
+- include_tasks: pull.yml
+- include_tasks: delete.yml
+- include_tasks: run.yml

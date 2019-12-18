@@ -1,0 +1,12 @@
+---
+- name: create image from file
+  docker_image:
+    build: 
+      path: "{{ varDestination }}"
+    name: "gcr.io/canvas-sentinel-258308/spring-bootapp"
+    tag: "{{ varTag }}"
+    push: no
+    source: build
+- name: push to gcr
+  shell: "docker push gcr.io/canvas-sentinel-258308/spring-bootapp:{{ vatTag }}"
+  

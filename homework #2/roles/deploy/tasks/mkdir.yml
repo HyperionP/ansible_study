@@ -1,0 +1,4 @@
+- name: create directory
+  file:
+    path: "{{varDestination}}"
+    state: directory

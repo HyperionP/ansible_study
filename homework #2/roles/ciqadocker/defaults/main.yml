@@ -1,0 +1,5 @@
+---
+# defaults file for ciqadocker
+varImage: gcr.io/canvas-sentinel-258308/spring-bootapp
+varTag: latest
+varPort: 8081

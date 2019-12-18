@@ -1,0 +1,7 @@
+- name: copy dockerfile
+  template:
+    src: Dockerfile.j2
+    dest: "{{ varDestination }}/Dockerfile"
+    owner: "{{ varUser }}"
+    group: "{{ varUser }}"
+    mode: "0644"
